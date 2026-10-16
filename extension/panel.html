@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rabbit Hole</title>
+<link rel="stylesheet" href="fonts.css">
+<link rel="stylesheet" href="theme.css">
+<link rel="stylesheet" href="panel.css">
+</head>
+<body>
+<main class="wrap">
+  <header class="head">
+    <div class="mascot" id="mascot"></div>
+    <div>
+      <h1>Rabbit Hole</h1>
+      <p class="kicker">A commonplace book for wandering minds</p>
+    </div>
+  </header>
+
+  <section class="card" id="idleBox">
+    <p class="state">Not falling.</p>
+    <p class="hint">Run a search, then start a trail from that tab. Rabbit Hole follows only that tab and the tabs that open from it, until you surface or pause.</p>
+    <button class="btn" id="start" type="button">Start a trail here</button>
+    <p class="warn" id="startNote" hidden></p>
+  </section>
+
+  <section class="card live" id="liveBox" hidden>
+    <p class="kicker" id="liveState">Falling</p>
+    <h2 id="liveTitle"></h2>
+    <p class="hint" id="liveStats"></p>
+    <div class="row">
+      <button class="btn small quiet" id="pause" type="button">Pause</button>
+      <button class="btn small quiet" id="resume" type="button" hidden>Resume</button>
+      <button class="btn small" id="surface" type="button">Surface</button>
+    </div>
+  </section>
+
+  <section id="pathBox" hidden>
+    <h3 class="kicker">The path so far</h3>
+    <ol class="path" id="path"></ol>
+    <p class="hint small">Tap the seal on a stop to mark that it mattered. Quick glances stay small on the map.</p>
+  </section>
+
+  <section id="recentBox" hidden>
+    <h3 class="kicker">Recent trails</h3>
+    <ul class="recent" id="recent"></ul>
+  </section>
+
+  <footer class="foot">
+    <button class="btn quiet" id="book" type="button">Open the book</button>
+    <button class="btn quiet" id="report" type="button">Read my week</button>
+    <p class="hint small">Everything stays in this browser. Banking, email and password sites are skipped.</p>
+  </footer>
+</main>
+<script src="common.js"></script>
+<script src="art.js"></script>
+<script src="panel.js"></script>
+</body>
+</html>

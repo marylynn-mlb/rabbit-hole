@@ -1,0 +1,9 @@
+# Your own trail exports contain your browsing. Keep them out of the repository.
+rabbit-hole-*.json
+*.export.json
+# Local noise
+.DS_Store
+__pycache__/
+node_modules/
+*.png
+!extension/icons/*.png
