@@ -1,0 +1,144 @@
+/* Romantic academia: dusty rose paper, aubergine ink, wine seals, gold leaf. Light and a candlelit dark. */
+:root {
+  --bg: #E9D6D2;
+  --paper: #FBF3EF;
+  --paper-2: #F2E3DE;
+  --ink: #3A1D2B;
+  --muted: #7B5B66;
+  --rule: #C7A5A8;
+  --accent: #7A2742;
+  --accent-deep: #5A1A2F;
+  --on-accent: #FBF3EF;
+  --accent-soft: #F0D9D8;
+  --title: #7A2742;
+  --gold: #B8923F;
+  --sage: #8DA083;
+  --sage-ink: #5F7358;
+  --blossom: #E6A9B8;
+  --thread: #B07A86;
+  --hip: #C4553F;
+  --band: rgba(122, 39, 66, .045);
+  --seal-falling: #D4AE55;
+  --seal-falling-ink: #3A1D2B;
+  --seal-landed: #8A2D49;
+  --seal-landed-ink: #FBE9E3;
+  --seal-dead: #D9C6C4;
+  --seal-dead-ink: #6B4A55;
+  --hole: #3A1D2B;
+  --mound: #A9B99E;
+  --rabbit: #FFF9F6;
+  --rabbit-ink: #3A1D2B;
+  --ribbon: #7A2742;
+  --danger: #A3243F;
+  --shadow: rgba(58, 29, 43, .16);
+  --font-script: "Pinyon Script", "Snell Roundhand", "Brush Script MT", cursive;
+  --font-head: "Cormorant Garamond", "Palatino Linotype", Georgia, serif;
+  --font-body: "EB Garamond", Georgia, "Times New Roman", serif;
+  --grain: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .3 0 0 0 0 .12 0 0 0 0 .2 0 0 0 .09 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1B1118; --paper: #281A22; --paper-2: #34222D; --ink: #F1E3D4; --muted: #BFA5A8; --rule: #5A3F4B;
+    --accent: #E8A3B7; --accent-deep: #C9748F; --on-accent: #2A1420; --accent-soft: #422B38; --title: #EDB9C7;
+    --gold: #D3AE5F; --sage: #5E7458; --sage-ink: #93AB89; --blossom: #D98BA3; --thread: #9A6574; --hip: #E2806A;
+    --band: rgba(255, 255, 255, .03);
+    --seal-landed: #A23A5A; --seal-dead: #4A3640; --seal-dead-ink: #D7BFC3;
+    --hole: #0E080C; --mound: #46583F; --danger: #FF9DB5; --shadow: rgba(0, 0, 0, .45);
+    color-scheme: dark;
+  }
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body {
+  background: var(--bg) var(--grain);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 1.5;
+}
+button, input, textarea, select { font: inherit; color: inherit; }
+button { cursor: pointer; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+[hidden] { display: none !important; }
+
+.kicker, .fl {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: .8rem;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+.fl { display: block; color: var(--muted); margin: 16px 0 6px; }
+.row { display: flex; gap: 10px; flex-wrap: wrap; }
+
+input[type="text"], input[type="url"], input[type="number"], textarea, select {
+  width: 100%;
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  border-bottom: 2px solid var(--thread);
+  border-radius: 3px;
+  padding: 10px 12px;
+  font-size: 17px;
+  line-height: 1.4;
+}
+input::placeholder, textarea::placeholder { font-style: italic; color: var(--muted); opacity: .85; }
+textarea { resize: vertical; min-height: 100px; }
+input:focus, textarea:focus, select:focus { border-color: var(--accent); outline: none; box-shadow: 0 0 0 3px var(--accent-soft); }
+
+.btn {
+  background: var(--accent);
+  color: var(--on-accent);
+  border: 0;
+  border-radius: 3px;
+  padding: 10px 22px;
+  min-height: 44px;
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: .95rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  box-shadow: inset 0 0 0 3px var(--accent), inset 0 0 0 4px var(--gold);
+  transition: background .15s ease;
+}
+.btn:hover { background: var(--accent-deep); box-shadow: inset 0 0 0 3px var(--accent-deep), inset 0 0 0 4px var(--gold); }
+.btn.quiet { background: var(--paper); color: var(--ink); box-shadow: inset 0 0 0 1px var(--rule); }
+.btn.quiet:hover { background: var(--paper-2); box-shadow: inset 0 0 0 1px var(--rule); }
+.btn.danger { background: var(--danger); box-shadow: inset 0 0 0 3px var(--danger), inset 0 0 0 4px var(--gold); color: var(--paper); }
+.btn.small { min-height: 36px; padding: 6px 14px; font-size: .8rem; }
+.linkbtn { background: none; border: 0; padding: 4px 0; color: var(--accent); text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; font-style: italic; }
+.ghost { background: none; border: 0; padding: 8px 0; color: var(--danger); font-style: italic; text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+
+.seg { display: flex; flex-wrap: wrap; gap: 8px; }
+.seg button {
+  display: inline-flex; align-items: center; gap: 7px;
+  min-height: 40px; padding: 5px 13px;
+  border: 1px solid var(--rule); border-radius: 999px; background: var(--paper);
+  font-family: var(--font-head); font-weight: 700; font-size: .78rem; letter-spacing: .1em; text-transform: uppercase;
+}
+.seg button[aria-pressed="true"] { border-color: var(--accent); background: var(--accent-soft); color: var(--accent); }
+.dot { width: 13px; height: 13px; border-radius: 50%; border: 1px solid var(--ink); }
+.dot.falling { background: var(--seal-falling); }
+.dot.landed { background: var(--seal-landed); }
+.dot.dead { background: var(--seal-dead); border-style: dashed; }
+
+.framed { position: relative; background: var(--paper) var(--grain); border: 1px solid var(--rule); border-radius: 4px; box-shadow: 0 10px 28px var(--shadow); }
+.framed::before { content: ""; position: absolute; inset: 6px; border: 1px solid var(--rule); border-radius: 2px; pointer-events: none; z-index: 1; }
+
+.mascot svg { display: block; width: 100%; height: auto; }
+.toast {
+  position: fixed; left: 50%; transform: translateX(-50%); bottom: 18px;
+  background: var(--ink); color: var(--paper);
+  padding: 10px 20px; border-radius: 3px; z-index: 40;
+  max-width: calc(100% - 32px); text-align: center; font-style: italic;
+  opacity: 0; pointer-events: none; transition: opacity .2s ease;
+}
+.toast.on { opacity: 1; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .ear-r { transform-box: fill-box; transform-origin: 50% 92%; animation: twitch 6s ease-in-out infinite; }
+  .eye { transform-box: fill-box; transform-origin: 50% 50%; animation: blink 7s infinite; }
+  @keyframes twitch { 0%, 88%, 100% { transform: rotate(0); } 91% { transform: rotate(9deg); } 94% { transform: rotate(-4deg); } 97% { transform: rotate(5deg); } }
+  @keyframes blink { 0%, 94%, 100% { transform: scaleY(1); } 96% { transform: scaleY(.1); } }
+}

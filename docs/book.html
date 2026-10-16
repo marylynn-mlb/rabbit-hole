@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rabbit Hole</title>
+<link rel="stylesheet" href="fonts.css">
+<link rel="stylesheet" href="theme.css">
+<link rel="stylesheet" href="book.css">
+<link rel="stylesheet" href="sample.css">
+</head>
+<body>
+<div class="sample-banner">Sample data. This is the real Rabbit Hole book and report running on a set of public pages, not a live extension.  <a href="https://github.com/marylynn-mlb/rabbit-hole">Code on GitHub</a></div>
+<main class="shell">
+  <header class="top">
+    <div class="mascot" id="mascotTop"></div>
+    <div class="head-text">
+      <h1>Rabbit Hole</h1>
+      <p class="kicker tag">A commonplace book for wandering minds</p>
+      <p class="readlink"><a class="linkbtn" href="report.html">Read my week</a></p>
+    </div>
+    <figure class="plate" aria-hidden="true"><div id="plateArt"></div><figcaption>Plate I · wild rose</figcaption></figure>
+  </header>
+  <div class="divider" id="divider" aria-hidden="true"></div>
+
+  <nav class="picker" id="picker" aria-label="Your trails"></nav>
+
+  <section class="empty-book" id="emptyBook" hidden>
+    <div class="mascot" id="mascotEmpty"></div>
+    <h2>No trails yet.</h2>
+    <p>Run a search in any tab. Then click the Rabbit Hole icon in the toolbar and choose "Start a trail here". When you surface, the trail appears here.</p>
+  </section>
+
+  <section id="trailView" hidden>
+    <div class="framed trail-head" id="trailHead">
+      <div class="th-grid">
+        <div>
+          <label class="fl" for="tTitle">Name this trail</label>
+          <input id="tTitle" type="text" maxlength="140">
+        </div>
+        <div>
+          <label class="fl" for="tLanding" id="landLbl">Where did it land?</label>
+          <textarea id="tLanding" rows="2" maxlength="2000" placeholder="One or two sentences on what you came away with, or what is still unsettled"></textarea>
+        </div>
+      </div>
+      <p class="meta" id="trailMeta"></p>
+    </div>
+
+    <div class="work">
+      <section class="framed mapwrap" aria-label="Map of this trail">
+        <div class="corner tr" id="cornerA" aria-hidden="true"></div>
+        <div class="corner br" id="cornerB" aria-hidden="true"></div>
+        <div class="scroller" id="scroller"><svg id="map" role="group" aria-label="This trail, deeper as you go down"></svg></div>
+      </section>
+      <aside class="framed panel" id="panel" aria-label="Stop details"></aside>
+    </div>
+  </section>
+
+  <section class="lower" id="lower" hidden>
+    <div class="framed card" id="patterns"></div>
+    <div class="framed card" id="settingsCard"></div>
+  </section>
+  <p class="footnote">Everything here is stored in this browser and goes nowhere else.</p>
+</main>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="sample-data.js"></script>
+<script src="shim.js"></script>
+<script src="common.js"></script>
+<script src="art.js"></script>
+<script src="book.js"></script>
+</body>
+</html>

@@ -63,3 +63,9 @@ Exports from the book are your browsing history. They are ignored by `.gitignore
 - Only trails you start are recorded. Many real trails begin on a page, not a search, so passive capture is the next design question.
 - Titles and search words only, never page text.
 - A few days of data gives repeats, not habits.
+
+## Example output
+
+`docs/` is a static example of the book and the report, served by GitHub Pages. It runs the real extension pages on a set of
+sample trails built from public pages, with notes removed and personal paths cleaned (`tools/make-sample.py`).
+`tools/build-demo.py` rebuilds it from `extension/`, so the example always matches the code.

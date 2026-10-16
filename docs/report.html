@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rabbit Hole: a reading</title>
+<link rel="stylesheet" href="fonts.css">
+<link rel="stylesheet" href="theme.css">
+<link rel="stylesheet" href="report.css">
+<link rel="stylesheet" href="sample.css">
+</head>
+<body>
+<div class="sample-banner">Sample data. This is the real Rabbit Hole book and report running on a set of public pages, not a live extension.  <a href="https://github.com/marylynn-mlb/rabbit-hole">Code on GitHub</a></div>
+<main class="wrap">
+  <header class="top">
+    <div class="mascot" id="mascot"></div>
+    <div>
+      <h1>Rabbit Hole</h1>
+      <p class="sub" id="sub">A reading of your trails</p>
+    </div>
+    <figure class="plate" aria-hidden="true"><div id="plate"></div></figure>
+  </header>
+  <div class="divider" id="divider" aria-hidden="true"></div>
+  <div class="toolbar">
+    <div class="seg" role="group" aria-label="Period" id="range">
+      <button type="button" data-days="7" aria-pressed="true">Last 7 days</button>
+      <button type="button" data-days="30" aria-pressed="false">Last 30 days</button>
+      <button type="button" data-days="0" aria-pressed="false">Everything</button>
+    </div>
+    <a class="linkbtn" href="book.html">Back to the book</a>
+  </div>
+  <p class="lede">Everything below is counted or matched by code from your own log, so each line can be checked against the stops it came from. Nothing leaves this browser.</p>
+  <div id="out"></div>
+</main>
+<script src="sample-data.js"></script>
+<script src="shim.js"></script>
+<script src="common.js"></script>
+<script src="art.js"></script>
+<script src="analyze.js"></script>
+<script src="report.js"></script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+
+.sample-banner{position:sticky;top:0;z-index:50;padding:8px 16px;text-align:center;font:italic 15px/1.3 'EB Garamond',Georgia,serif;background:#2a1a28;color:#e9d9e0;border-bottom:1px solid #6b4a63}
+.sample-banner a{color:#f0a8c4}
+#settingsCard{display:none!important}
