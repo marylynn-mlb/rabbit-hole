@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rabbit Hole: examples</title>
+<link rel="stylesheet" href="fonts.css">
+<link rel="stylesheet" href="theme.css">
+<style>
+  body { margin: 0; }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 40px 16px 64px; }
+  h1 { font-family: var(--font-script); font-weight: 400; font-size: clamp(3.2rem, 12vw, 5.2rem); line-height: .95; margin: 0; color: var(--title); padding-right: .1em; }
+  .lede { margin: 12px 0 0; max-width: 58ch; font-size: 1.15rem; text-wrap: balance; }
+  .note { margin: 10px 0 0; color: var(--muted); font-style: italic; }
+  .cards { display: grid; grid-template-columns: minmax(0, 1fr); gap: 24px; margin-top: 32px; }
+  @media (min-width: 820px) { .cards { grid-template-columns: 1fr 1fr; } }
+  a.card { display: block; text-decoration: none; color: inherit; background: var(--paper); border: 1px solid var(--rule); border-radius: 3px; overflow: hidden; }
+  a.card:hover, a.card:focus-visible { border-color: var(--accent); }
+  a.card img { display: block; width: 100%; height: auto; border-bottom: 1px solid var(--rule); }
+  .card .body { padding: 14px 18px 18px; }
+  .card h2 { font-family: var(--font-head); font-style: italic; font-weight: 600; font-size: 1.6rem; margin: 0 0 4px; color: var(--accent); }
+  .card p { margin: 0; }
+  .card .go { display: inline-block; margin-top: 10px; font-style: italic; color: var(--accent); text-decoration: underline; }
+  .foot { margin-top: 32px; color: var(--muted); font-style: italic; }
+  .foot a { color: var(--accent); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Rabbit Hole</h1>
+  <p class="lede">A Chrome extension that follows one curiosity trail at a time, draws it as a map, and reads back what kept returning. Two examples of its output follow.</p>
+  <p class="note">Sample data: the real pages running on ten trails through public pages. This is not a live extension, and nothing here reads your browsing.</p>
+
+  <div class="cards">
+    <a class="card" href="book.html">
+      <img src="img/book.jpg" alt="The book: a trail drawn as a map of seals joined by threads, one stop per page visited" width="1200" height="860">
+      <div class="body">
+        <h2>The book</h2>
+        <p>One trail drawn as a map. Each seal is a page, each thread a click, and the chapters mark how far down you went.</p>
+        <span class="go">Open the book</span>
+      </div>
+    </a>
+    <a class="card" href="report.html">
+      <img src="img/report.jpg" alt="The report: counts, rows of beads for each trail, and the words that came back" width="1200" height="860">
+      <div class="body">
+        <h2>The reading</h2>
+        <p>What came back across trails: returning words, things you saw and then searched for, sittings, and loose ends. Counted by code, with no AI.</p>
+        <span class="go">Read the sample week</span>
+      </div>
+    </a>
+  </div>
+
+  <p class="foot"><a href="https://github.com/marylynn-mlb/rabbit-hole">Code and notes on GitHub</a></p>
+</div>
+</body>
+</html>
